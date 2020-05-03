@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="loginModule">
+		<classes>
+			<class name="testNGTutorial.ZivameLoginTC">
+				<methods>
+					<include name="zivameLogin_validUserName_Password"></include>
+					<include name="zivameLogin_InvalidUserName_Passowrd"></include>
+					<include name="zivameLogin_BlankUserName_Passoword"></include>
+				</methods>
+			</class>
+			<class name="testNGTutorial.FaceBookLoginTC"></class>
+			<class name="testNGTutorial.GoogleLoginTC">
+				<methods>
+					<include name="googleLogin_validUserName_Password"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test thread-count="5" name="RegistrationModule">
+		<classes>
+			<class name="testNGTutorial.ZivameRegistrationTC"></class>
+			<class name="testNGTutorial.FaceBookRegistrationTC"></class>
+			<class name="testNGTutorial.GoogleRegistrationTC"></class>
+		</classes>
+	</test>
+
+	<test thread-count="5" name="PaymentModule">
+		<classes>
+			<class name="testNGTutorial.PaymentTC">
+			    <methods >
+			        <include name="PaymenByWallet.*"></include>
+			    </methods>
+			</class>
+		</classes>
+	</test>
+
+	<test thread-count="5" name="AddToCartModule">
+		<classes>
+			<class name="testNGTutorial.AddToCartTC"></class>
+		</classes>
+	</test>
+
+	<test thread-count="5" name="WishListModule">
+		<classes>
+			<class name="testNGTutorial.WishListTC">
+			    <methods>
+			        <include name="add.*"></include>
+			    </methods>
+			</class>
+		</classes>
+	</test>
+</suite> 

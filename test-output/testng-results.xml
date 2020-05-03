@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="63719" started-at="2020-03-22T13:22:05Z" finished-at="2020-03-22T13:23:09Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="63719" started-at="2020-03-22T13:22:05Z" finished-at="2020-03-22T13:23:09Z">
+      <class name="com.java.basics.HandlingBootStrapDropDown">
+        <test-method status="PASS" signature="logConfig()[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@6eebc39e]" name="logConfig" is-config="true" duration-ms="101" started-at="2020-03-22T13:22:05Z" finished-at="2020-03-22T13:22:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logConfig -->
+        <test-method status="PASS" signature="setUptest()[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@6eebc39e]" name="setUptest" is-config="true" duration-ms="1" started-at="2020-03-22T13:22:05Z" finished-at="2020-03-22T13:22:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUptest -->
+        <test-method status="PASS" signature="setupScript()[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@6eebc39e]" name="setupScript" is-config="true" duration-ms="4789" started-at="2020-03-22T13:22:05Z" finished-at="2020-03-22T13:22:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupScript -->
+        <test-method status="PASS" signature="printallOptions()[pri:1, instance:com.java.basics.HandlingBootStrapDropDown@6eebc39e]" name="printallOptions" duration-ms="4484" started-at="2020-03-22T13:22:10Z" finished-at="2020-03-22T13:22:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- printallOptions -->
+        <test-method status="PASS" signature="tearDownScript()[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@6eebc39e]" name="tearDownScript" is-config="true" duration-ms="748" started-at="2020-03-22T13:22:15Z" finished-at="2020-03-22T13:22:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownScript -->
+        <test-method status="PASS" signature="setupScript()[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@6eebc39e]" name="setupScript" is-config="true" duration-ms="3848" started-at="2020-03-22T13:22:15Z" finished-at="2020-03-22T13:22:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupScript -->
+        <test-method status="PASS" signature="clickSelected()[pri:2, instance:com.java.basics.HandlingBootStrapDropDown@6eebc39e]" name="clickSelected" duration-ms="6731" started-at="2020-03-22T13:22:19Z" finished-at="2020-03-22T13:22:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickSelected -->
+        <test-method status="PASS" signature="tearDownScript()[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@6eebc39e]" name="tearDownScript" is-config="true" duration-ms="707" started-at="2020-03-22T13:22:26Z" finished-at="2020-03-22T13:22:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownScript -->
+        <test-method status="PASS" signature="setupScript()[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@6eebc39e]" name="setupScript" is-config="true" duration-ms="3939" started-at="2020-03-22T13:22:27Z" finished-at="2020-03-22T13:22:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupScript -->
+        <test-method status="PASS" signature="clickSelectedOnCondiion()[pri:3, instance:com.java.basics.HandlingBootStrapDropDown@6eebc39e]" name="clickSelectedOnCondiion" duration-ms="3667" started-at="2020-03-22T13:22:31Z" finished-at="2020-03-22T13:22:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickSelectedOnCondiion -->
+        <test-method status="PASS" signature="tearDownScript()[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@6eebc39e]" name="tearDownScript" is-config="true" duration-ms="666" started-at="2020-03-22T13:22:34Z" finished-at="2020-03-22T13:22:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownScript -->
+        <test-method status="PASS" signature="setupScript()[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@6eebc39e]" name="setupScript" is-config="true" duration-ms="3659" started-at="2020-03-22T13:22:35Z" finished-at="2020-03-22T13:22:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupScript -->
+        <test-method status="PASS" signature="clickSelectedOnCondiion2()[pri:3, instance:com.java.basics.HandlingBootStrapDropDown@6eebc39e]" name="clickSelectedOnCondiion2" duration-ms="29708" started-at="2020-03-22T13:22:39Z" finished-at="2020-03-22T13:23:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickSelectedOnCondiion2 -->
+        <test-method status="PASS" signature="tearDownScript()[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@6eebc39e]" name="tearDownScript" is-config="true" duration-ms="733" started-at="2020-03-22T13:23:08Z" finished-at="2020-03-22T13:23:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownScript -->
+        <test-method status="PASS" signature="tearDowntest()[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@6eebc39e]" name="tearDowntest" is-config="true" duration-ms="3" started-at="2020-03-22T13:23:09Z" finished-at="2020-03-22T13:23:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDowntest -->
+        <test-method status="PASS" signature="flushObject()[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@6eebc39e]" name="flushObject" is-config="true" duration-ms="1" started-at="2020-03-22T13:23:09Z" finished-at="2020-03-22T13:23:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushObject -->
+      </class> <!-- com.java.basics.HandlingBootStrapDropDown -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
