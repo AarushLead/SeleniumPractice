@@ -1,1 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ThreadSuite" parallel="tests" thread-count="3">
+	<parameter name="url" value="https://www.google.com/"></parameter>
+	<test name="testchrome">
+		<parameter name="Browser" value="chrome"></parameter>
+		<parameter name="search" value="Selenium"></parameter>
+		<classes>
+			<class name="com.java.multithreadApproach.TestPage4">
+			    <methods>
+			        <include name="seleniumTest"></include>
+			    </methods>
+			</class>
+		</classes>
+	</test>
+	
+	 <test name="testfirefox">
+		<parameter name="Browser" value="firefox"></parameter>
+		<parameter name="search" value="java"></parameter>
+		<classes>
+			<class name="com.java.multithreadApproach.TestPage4">
+			    <methods>
+			        <include name="javaTest"></include>
+			    </methods>
+			</class>
+		</classes>
+	</test>
+	
+		<test name="testIE">
+		<parameter name="Browser" value="ie"></parameter>
+		<parameter name="search" value="sql"></parameter>
+		<classes>
+		<class name="com.java.multithreadApproach.TestPage4">
+			    <methods>
+			        <include name="sqlTest"></include>
+			    </methods>
+			</class>
+		</classes>
+	</test>
+</suite>

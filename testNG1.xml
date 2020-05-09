@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="com.java.reporting.ExtentListener"></listener>
+    </listeners>
+	<test  name="TestChrome">
+	    <parameter name="Browser" value="chrome"></parameter>
+		<classes>
+				<class name="com.java.basics.HandlingBootStrapDropDown">
+				<methods>
+					<include name="printallOptions"></include>
+					<include name="clickSelected"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test  name="testFirefox">
+	    <parameter name="Browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.java.basics.HandlingBootStrapDropDown">
+			    <methods>
+					<include name="clickSelectedOnCondiion2"></include>
+				</methods>			    
+			</class>
+		</classes>
+	</test>
+	<test  name="testIE">
+	    <parameter name="Browser" value="ie"></parameter>
+		<classes>
+			<class name="com.java.basics.HandlingBootStrapDropDown">
+			    <methods>
+					<include name="clickSelectedOnCondiion"></include>
+				</methods>			    
+			</class>
+		</classes>
+	</test>
+</suite> 

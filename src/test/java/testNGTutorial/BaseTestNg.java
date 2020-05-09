@@ -1,6 +1,5 @@
 package testNGTutorial;
 
-import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.annotations.AfterSuite;
@@ -16,8 +15,6 @@ public class BaseTestNg {
 		String logPath = System.getProperty("user.dir") + "/src/test/resources";
 		logger = Logger.getLogger("WebExecutionLog"); // Logger
 		PropertyConfigurator.configure(logPath + "/log4j.properties"); // Logger
-		logger.setLevel(Level.INFO);
-		logger.info("********Before suite***********");
 	}
 
 	@BeforeTest

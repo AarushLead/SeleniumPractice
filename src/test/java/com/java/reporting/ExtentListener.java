@@ -10,13 +10,14 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.MediaEntityModelProvider;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.java.base.BaseTest;
 import com.java.screenshotways.ScreenShots;
 
-public class ExtentListener extends BaseTest implements ITestListener {
+public class ExtentListener  implements ITestListener {
 
 	ExtentReports extent = ExtentManager.getInstance();
 	ExtentTest test;
@@ -24,7 +25,7 @@ public class ExtentListener extends BaseTest implements ITestListener {
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		test = extent.createTest(result.getClass().getName() + "  @Test case :" + result.getMethod().getMethodName());
+		test = extent.createTest(result.getClass().getSimpleName()+ "  @Test case :"+" "+ result.getMethod().getMethodName());
 		extentTest.set(test);
 	}
 
@@ -32,9 +33,9 @@ public class ExtentListener extends BaseTest implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 
 		String methodName = result.getMethod().getMethodName();
-		String logText = "<b>" + "TEST CASE :- " + methodName.toUpperCase() + "PASSED" + "</b>";
-		Markup m = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
-		extentTest.get().pass(m);
+		String logText = "<b>" + "TEST CASE :- " + methodName.toUpperCase()+"  "+ "PASSED" + "</b>";
+		
+		extentTest.get().log(Status.PASS, MarkupHelper.createLabel(logText, ExtentColor.GREEN));
 	}
 
 	@Override
@@ -44,10 +45,12 @@ public class ExtentListener extends BaseTest implements ITestListener {
 		WebDriver driver=null;
 		String methodName=result.getMethod().getMethodName();
 		String exceptionMessage=Arrays.toString(result.getThrowable().getStackTrace());
-		String logText="<b>"+"TEST CASE :- "+methodName.toUpperCase()+"FAILED"+"</b>";
+		String logText="<b>"+"TEST CASE :- "+methodName.toUpperCase()+"  "+"FAILED"+"</b>";
 		
-		extentTest.get().fail("<details>"+"<summary>"+"<b>"+"<font color="+"red>"+"Exception Occured:Click to see"+"</font>"+"</b>"
-		+"</summary>"+exceptionMessage.replaceAll(",", "<br>")+"</details>"+"\n");
+		extentTest.get().log(Status.FAIL,MarkupHelper.createLabel(logText,ExtentColor.RED));
+		
+		extentTest.get().log(Status.FAIL, "<details>"+"<summary>"+"<b>"+"<font color=red>"+"Exception Occured : Click to see"+"</font>"+"</b>"
+		+"</summary>"+exceptionMessage.replaceAll(",", "<br>")+"</details>");
 		
 		MediaEntityModelProvider mediaModel;
 		Object testObject = result.getInstance();
@@ -59,15 +62,14 @@ public class ExtentListener extends BaseTest implements ITestListener {
 		}
 		
 		try {
+			mediaModel = MediaEntityBuilder.createScreenCaptureFromPath(ScreenShots.screenShot1(driver,result.getMethod().getMethodName()), result.getMethod().getMethodName()).build();
 			
-			mediaModel = MediaEntityBuilder.createScreenCaptureFromPath(ScreenShots.screenShot1(driver,result.getMethod().getMethodName())).build();
-			extentTest.get().fail("<b>"+"<font color="+"red>"+"ScreenShot of failure"+"</font>"+"</b>",mediaModel);
+			extentTest.get().log(Status.FAIL,"<b>"+"<font color=red>"+"ScreenShot of failure"+"</font>"+"</b>", mediaModel);
+		
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		Markup m = MarkupHelper.createLabel(logText,ExtentColor.RED);
-		extentTest.get().fail(m);		
+		}		
 		
 	}
 
@@ -75,9 +77,9 @@ public class ExtentListener extends BaseTest implements ITestListener {
 	public void onTestSkipped(ITestResult result) {
 
 		String methodName = result.getMethod().getMethodName();
-		String logText = "<b>" + "TEST CASE :- " + methodName.toUpperCase() + "SKIPPED" + "</b>";
+		String logText = "<b>" + "TEST CASE :- " + methodName.toUpperCase()+"  "+"SKIPPED" + "</b>";
 		Markup m = MarkupHelper.createLabel(logText, ExtentColor.ORANGE);
-		extentTest.get().skip(m);
+		extentTest.get().log(Status.SKIP, m);
 	}
 
 	@Override
@@ -92,6 +94,6 @@ public class ExtentListener extends BaseTest implements ITestListener {
 
 	@Override
 	public void onFinish(ITestContext context) {
-		// TODO Auto-generated method stub
+		extent.flush();
 	}
 }
