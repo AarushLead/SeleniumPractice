@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="2" name="TestChrome(failed)" parallel="tests">
+    <parameter name="Browser" value="chrome"/>
+    <classes>
+      <class name="com.java.popUpHandling.AlertPopUphandling">
+        <methods>
+          <include name="tearDownScript"/>
+          <include name="Loadlog4jConfig"/>
+          <include name="setupScript"/>
+          <include name="alertAccept"/>
+        </methods>
+      </class> <!-- com.java.popUpHandling.AlertPopUphandling -->
+    </classes>
+  </test> <!-- TestChrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->

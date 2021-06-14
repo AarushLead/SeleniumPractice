@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="5" total="8" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="31056" started-at="2020-05-09T13:03:18Z" finished-at="2020-05-09T13:03:49Z">
+  <suite name="Suite" duration-ms="7624" started-at="2020-07-11T17:45:17Z" finished-at="2020-07-11T17:45:24Z">
     <groups>
     </groups>
-    <test name="TestChrome" duration-ms="27309" started-at="2020-05-09T13:03:18Z" finished-at="2020-05-09T13:03:45Z">
-      <class name="com.java.basics.HandlingBootStrapDropDown">
-        <test-method status="PASS" signature="setUptest()[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@58fdd99]" name="setUptest" is-config="true" duration-ms="6" started-at="2020-05-09T13:03:18Z" finished-at="2020-05-09T13:03:18Z">
+    <test name="TestChrome" duration-ms="7624" started-at="2020-07-11T17:45:17Z" finished-at="2020-07-11T17:45:24Z">
+      <class name="com.java.popup.PopUpHandling">
+        <test-method status="PASS" signature="Loadlog4jConfig()[pri:0, instance:com.java.popup.PopUpHandling@56ac3a89]" name="Loadlog4jConfig" is-config="true" duration-ms="110" started-at="2020-07-11T17:45:17Z" finished-at="2020-07-11T17:45:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUptest -->
-        <test-method status="PASS" signature="setupScript(java.lang.String)[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@58fdd99]" name="setupScript" is-config="true" duration-ms="4486" started-at="2020-05-09T13:03:18Z" finished-at="2020-05-09T13:03:22Z">
+        </test-method> <!-- Loadlog4jConfig -->
+        <test-method status="PASS" signature="setupScript(java.lang.String)[pri:0, instance:com.java.popup.PopUpHandling@56ac3a89]" name="setupScript" is-config="true" duration-ms="4979" started-at="2020-07-11T17:45:17Z" finished-at="2020-07-11T17:45:22Z">
           <params>
             <param index="0">
               <value>
@@ -22,61 +22,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupScript -->
-        <test-method status="PASS" signature="printallOptions()[pri:1, instance:com.java.basics.HandlingBootStrapDropDown@58fdd99]" name="printallOptions" duration-ms="9891" started-at="2020-05-09T13:03:22Z" finished-at="2020-05-09T13:03:32Z">
+        <test-method status="PASS" signature="ahandleAuthentication()[pri:0, instance:com.java.popup.PopUpHandling@56ac3a89]" name="ahandleAuthentication" duration-ms="1886" started-at="2020-07-11T17:45:22Z" finished-at="2020-07-11T17:45:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- printallOptions -->
-        <test-method status="PASS" signature="tearDownScript()[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@58fdd99]" name="tearDownScript" is-config="true" duration-ms="666" started-at="2020-05-09T13:03:32Z" finished-at="2020-05-09T13:03:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownScript -->
-        <test-method status="PASS" signature="setupScript(java.lang.String)[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@58fdd99]" name="setupScript" is-config="true" duration-ms="3581" started-at="2020-05-09T13:03:33Z" finished-at="2020-05-09T13:03:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupScript -->
-        <test-method status="PASS" signature="clickSelected()[pri:2, instance:com.java.basics.HandlingBootStrapDropDown@58fdd99]" name="clickSelected" duration-ms="7937" started-at="2020-05-09T13:03:36Z" finished-at="2020-05-09T13:03:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickSelected -->
-        <test-method status="PASS" signature="tearDownScript()[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@58fdd99]" name="tearDownScript" is-config="true" duration-ms="708" started-at="2020-05-09T13:03:44Z" finished-at="2020-05-09T13:03:45Z">
+        </test-method> <!-- ahandleAuthentication -->
+        <test-method status="PASS" signature="tearDownScript()[pri:0, instance:com.java.popup.PopUpHandling@56ac3a89]" name="tearDownScript" is-config="true" duration-ms="740" started-at="2020-07-11T17:45:24Z" finished-at="2020-07-11T17:45:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownScript -->
-      </class> <!-- com.java.basics.HandlingBootStrapDropDown -->
+      </class> <!-- com.java.popup.PopUpHandling -->
     </test> <!-- TestChrome -->
-    <test name="testFirefox" duration-ms="31055" started-at="2020-05-09T13:03:18Z" finished-at="2020-05-09T13:03:49Z">
-      <class name="com.java.basics.HandlingBootStrapDropDown">
-        <test-method status="PASS" signature="setUptest()[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@176d53b2]" name="setUptest" is-config="true" duration-ms="4" started-at="2020-05-09T13:03:18Z" finished-at="2020-05-09T13:03:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUptest -->
-        <test-method status="PASS" signature="setupScript(java.lang.String)[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@176d53b2]" name="setupScript" is-config="true" duration-ms="7199" started-at="2020-05-09T13:03:18Z" finished-at="2020-05-09T13:03:25Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupScript -->
-        <test-method status="PASS" signature="clickSelectedOnCondiion2()[pri:3, instance:com.java.basics.HandlingBootStrapDropDown@176d53b2]" name="clickSelectedOnCondiion2" duration-ms="18374" started-at="2020-05-09T13:03:25Z" finished-at="2020-05-09T13:03:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickSelectedOnCondiion2 -->
-        <test-method status="PASS" signature="tearDownScript()[pri:0, instance:com.java.basics.HandlingBootStrapDropDown@176d53b2]" name="tearDownScript" is-config="true" duration-ms="5458" started-at="2020-05-09T13:03:43Z" finished-at="2020-05-09T13:03:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownScript -->
-      </class> <!-- com.java.basics.HandlingBootStrapDropDown -->
-    </test> <!-- testFirefox -->
   </suite> <!-- Suite -->
 </testng-results>

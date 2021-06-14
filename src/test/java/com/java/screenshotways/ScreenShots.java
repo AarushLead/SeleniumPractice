@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -26,8 +27,8 @@ public class ScreenShots {
 		String pattern="dd-MM-yy";
 		SimpleDateFormat sdf=new SimpleDateFormat(pattern);
 		String formatdate = sdf.format(new Date()).toString();
-		TakesScreenshot screenShot = (TakesScreenshot)driver;
-		File source = screenShot.getScreenshotAs(OutputType.FILE);
+		TakesScreenshot shots = (TakesScreenshot)driver;
+		File source = shots.getScreenshotAs(OutputType.FILE);
 		String path=System.getProperty("user.dir")+"/screenShot/"+testCaseName+formatdate+".png";
 		File dest=new File(path);
 		FileUtils.copyFile(source, dest);

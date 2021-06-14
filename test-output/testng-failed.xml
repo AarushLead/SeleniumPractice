@@ -1,44 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [ThreadSuite]" parallel="tests">
-  <parameter name="url" value="https://www.google.com/"/>
-  <test thread-count="3" name="testIE(failed)" parallel="tests">
-    <parameter name="search" value="sql"/>
-    <parameter name="Browser" value="ie"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.java.multithreadApproach.TestPage4">
+      <class name="com.java.popup.PopUpHandling">
         <methods>
-          <include name="sqlTest"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="ahandleAuthentication"/>
+          <include name="tearDownScript"/>
+          <include name="Loadlog4jConfig"/>
+          <include name="setupScript"/>
         </methods>
-      </class> <!-- com.java.multithreadApproach.TestPage4 -->
+      </class> <!-- com.java.popup.PopUpHandling -->
     </classes>
-  </test> <!-- testIE(failed) -->
-  <test thread-count="3" name="testfirefox(failed)" parallel="tests">
-    <parameter name="search" value="java"/>
-    <parameter name="Browser" value="firefox"/>
-    <classes>
-      <class name="com.java.multithreadApproach.TestPage4">
-        <methods>
-          <include name="setUp"/>
-          <include name="javaTest"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.java.multithreadApproach.TestPage4 -->
-    </classes>
-  </test> <!-- testfirefox(failed) -->
-  <test thread-count="3" name="testchrome(failed)" parallel="tests">
-    <parameter name="search" value="Selenium"/>
-    <parameter name="Browser" value="chrome"/>
-    <classes>
-      <class name="com.java.multithreadApproach.TestPage4">
-        <methods>
-          <include name="seleniumTest"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.java.multithreadApproach.TestPage4 -->
-    </classes>
-  </test> <!-- testchrome(failed) -->
-</suite> <!-- Failed suite [ThreadSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

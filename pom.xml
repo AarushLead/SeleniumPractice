@@ -50,6 +50,13 @@
 			<artifactId>selenium-java</artifactId>
 			<version>${selenium.version}</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>3.7.1</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
@@ -82,5 +89,25 @@
 			<artifactId>extentreports</artifactId>
 			<version>${extentreport.version}</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot -->
+		<dependency>
+			<groupId>ru.yandex.qatools.ashot</groupId>
+			<artifactId>ashot</artifactId>
+			<version>1.5.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.beust/jcommander -->
+		<dependency>
+			<groupId>com.beust</groupId>
+			<artifactId>jcommander</artifactId>
+			<version>1.78</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+
 	</dependencies>
 </project>

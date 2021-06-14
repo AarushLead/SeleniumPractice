@@ -3,17 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.java.basics.HandlingDropDown">
+      <class name="com.java.popup.PopUpHandling">
         <methods>
-          <include name="tearDowntest"/>
-          <include name="flushObject"/>
+          <include name="ahandleAuthentication"/>
           <include name="tearDownScript"/>
-          <include name="selectTagHandling"/>
-          <include name="logConfig"/>
-          <include name="setUptest"/>
+          <include name="Loadlog4jConfig"/>
           <include name="setupScript"/>
         </methods>
-      </class> <!-- com.java.basics.HandlingDropDown -->
+      </class> <!-- com.java.popup.PopUpHandling -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

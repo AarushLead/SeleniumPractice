@@ -9,6 +9,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class ExtentManager {
 	
 	static ExtentReports extent;
+	static ExtentSparkReporter sparkReport;
 	
 	public static ExtentReports getInstance()
 	{   
@@ -19,7 +20,7 @@ public class ExtentManager {
 		String reportPath=curDir+"/reports/ExecutionReport_"+formatdate+".html";
 		
 		//setting Report Info
-		ExtentSparkReporter sparkReport=new ExtentSparkReporter(reportPath);
+		sparkReport=new ExtentSparkReporter(reportPath);
 		
 		sparkReport.config().setDocumentTitle("Execution report");
 		sparkReport.config().setReportName("Extent Report");

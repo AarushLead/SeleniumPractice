@@ -49,12 +49,12 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>D:\JAVAWORKSPACE\SeleniumPractice\testNG1.xml</span>
+                    <span>D:\JAVAWORKSPACE\SeleniumPractice\NewFile.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">3 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,17 +102,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.java.basics.HandlingBootStrapDropDown" hash-for-method="clickSelected">clickSelected</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.java.basics.HandlingBootStrapDropDown" hash-for-method="clickSelectedOnCondiion2">clickSelectedOnCondiion2</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.java.basics.HandlingBootStrapDropDown" hash-for-method="printallOptions">printallOptions</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.java.popup.PopUpHandling" hash-for-method="ahandleAuthentication">ahandleAuthentication</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -130,28 +120,14 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.java.basics.HandlingBootStrapDropDown</span>
+              <span class="class-name">com.java.popup.PopUpHandling</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="clickSelected">
-                  </a> <!-- clickSelected -->
-                  <span class="method-name">clickSelected</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="clickSelectedOnCondiion2">
-                  </a> <!-- clickSelectedOnCondiion2 -->
-                  <span class="method-name">clickSelectedOnCondiion2</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="printallOptions">
-                  </a> <!-- printallOptions -->
-                  <span class="method-name">printallOptions</span>
+                  <a name="ahandleAuthentication">
+                  </a> <!-- ahandleAuthentication -->
+                  <span class="method-name">ahandleAuthentication</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -159,47 +135,23 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\JAVAWORKSPACE\SeleniumPractice\testNG1.xml</span>
+            <span class="header-content">D:\JAVAWORKSPACE\SeleniumPractice\NewFile.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;2&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot; parallel=&quot;tests&quot;&gt;
-  &lt;listeners&gt;
-    &lt;listener class-name=&quot;com.java.reporting.ExtentListener&quot;/&gt;
-  &lt;/listeners&gt;
   &lt;test thread-count=&quot;2&quot; name=&quot;TestChrome&quot; parallel=&quot;tests&quot;&gt;
     &lt;parameter name=&quot;Browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.java.basics.HandlingBootStrapDropDown&quot;&gt;
+      &lt;class name=&quot;com.java.popup.PopUpHandling&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;printallOptions&quot;/&gt;
-          &lt;include name=&quot;clickSelected&quot;/&gt;
+          &lt;include name=&quot;ahandleAuthentication&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.java.basics.HandlingBootStrapDropDown --&gt;
+      &lt;/class&gt; &lt;!-- com.java.popup.PopUpHandling --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- TestChrome --&gt;
-  &lt;test thread-count=&quot;2&quot; name=&quot;testFirefox&quot; parallel=&quot;tests&quot;&gt;
-    &lt;parameter name=&quot;Browser&quot; value=&quot;firefox&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.java.basics.HandlingBootStrapDropDown&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;clickSelectedOnCondiion2&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.java.basics.HandlingBootStrapDropDown --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- testFirefox --&gt;
-  &lt;test thread-count=&quot;2&quot; name=&quot;testIE&quot; parallel=&quot;tests&quot;&gt;
-    &lt;parameter name=&quot;Browser&quot; value=&quot;ie&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.java.basics.HandlingBootStrapDropDown&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;clickSelectedOnCondiion&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.java.basics.HandlingBootStrapDropDown --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- testIE --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -212,12 +164,6 @@
             <ul>
               <li>
                 <span class="test-name">TestChrome (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">testFirefox (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">testIE (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -243,24 +189,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'clickSelectedOnCondiion2')
-data.setCell(0, 2, 'com.java.basics.HandlingBootStrapDropDown')
-data.setCell(0, 3, 18374);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'printallOptions')
-data.setCell(1, 2, 'com.java.basics.HandlingBootStrapDropDown')
-data.setCell(1, 3, 9891);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'clickSelected')
-data.setCell(2, 2, 'com.java.basics.HandlingBootStrapDropDown')
-data.setCell(2, 3, 7937);
+data.setCell(0, 1, 'ahandleAuthentication')
+data.setCell(0, 2, 'com.java.popup.PopUpHandling')
+data.setCell(0, 3, 1886);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 36 seconds</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -275,30 +213,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">8 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.java.basics.HandlingBootStrapDropDown</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">clickSelectedOnCondiion</span>
-                <br/>
-                <span class="ignored-method-name">clickSelectedOnCondiion</span>
-                <br/>
-                <span class="ignored-method-name">printallOptions</span>
-                <br/>
-                <span class="ignored-method-name">printallOptions</span>
-                <br/>
-                <span class="ignored-method-name">clickSelected</span>
-                <br/>
-                <span class="ignored-method-name">clickSelected</span>
-                <br/>
-                <span class="ignored-method-name">clickSelectedOnCondiion2</span>
-                <br/>
-                <span class="ignored-method-name">clickSelectedOnCondiion2</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -307,69 +224,23 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.java.basics.HandlingBootStrapDropDown</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.java.popup.PopUpHandling</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">Loadlog4jConfig</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
-              <div class="configuration-test before">
-                <span class="method-name">setUptest</span>
-                <span class="method-start">22 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="configuration-test before">
-                <span class="method-name">setUptest</span>
-                <span class="method-start">24 ms</span>
-              </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setupScript(chrome)</span>
-                <span class="method-start">43 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">setupScript(firefox)</span>
-                <span class="method-start">43 ms</span>
+                <span class="method-start">130 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">printallOptions</span>
-                <span class="method-start">4529 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">clickSelectedOnCondiion2</span>
-                <span class="method-start">7242 ms</span>
+                <span class="method-name">ahandleAuthentication</span>
+                <span class="method-start">5110 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownScript</span>
-                <span class="method-start">14428 ms</span>
+                <span class="method-start">6998 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setupScript(chrome)</span>
-                <span class="method-start">15101 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">clickSelected</span>
-                <span class="method-start">18682 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDownScript</span>
-                <span class="method-start">25617 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDownScript</span>
-                <span class="method-start">26620 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-test before">
-                <span class="method-name">setUptest</span>
-                <span class="method-start">27787 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="configuration-method before">
-                <span class="method-name">setupScript(ie)</span>
-                <span class="method-start">27790 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">clickSelectedOnCondiion</span>
-                <span class="method-start">29105 ms</span>
-              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

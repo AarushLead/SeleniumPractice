@@ -18,6 +18,8 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseTest {
 
 	public static Logger logger = null;
@@ -29,18 +31,14 @@ public class BaseTest {
 		logger = Logger.getLogger("WebExecutionLog"); // Logger
 		PropertyConfigurator.configure(logPath + "/log4j.properties"); // Logger
 	}
-
-	@BeforeTest
-	public void setUptest() {
-		logger.info("********BEFORE TEST***********");
-	}
-
+	
 	@BeforeMethod
 	@Parameters("Browser")
 	public void setupScript(String Browser)
 	{
 		if (Browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+			
+			WebDriverManager.chromedriver().setup();
 			ChromeOptions option = new ChromeOptions();
 			option.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });																							// automated soft]
 			option.setAcceptInsecureCerts(true);
@@ -53,7 +51,7 @@ public class BaseTest {
 		}
 		else if (Browser.equalsIgnoreCase("firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions option = new FirefoxOptions();
 			option.setAcceptInsecureCerts(true); // This help us to Bypass SSL certificate
 			option.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.ACCEPT); // To handle unhandled Alert
@@ -62,7 +60,7 @@ public class BaseTest {
 		}
 		else if (Browser.equalsIgnoreCase("ie")) 
 		{
-			System.setProperty("webdriver.ie.driver", "./drivers/IEDriverServer.exe");
+			WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
 		}
 		driver.manage().window().maximize();

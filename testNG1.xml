@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="tests" thread-count="2">
     <listeners>
-        <listener class-name="com.java.reporting.ExtentListener"></listener>
+        <listener class-name="com.java.reporting1.ExtentReportListener"></listener>
     </listeners>
 	<test  name="TestChrome">
 	    <parameter name="Browser" value="chrome"></parameter>

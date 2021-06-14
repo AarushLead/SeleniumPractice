@@ -14,18 +14,16 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.java.base.BaseTest;
 import com.java.screenshotways.ScreenShots;
 
 public class ExtentListener  implements ITestListener {
 
-	ExtentReports extent = ExtentManager.getInstance();
-	ExtentTest test;
+	private static ExtentReports extent = ExtentManager.getInstance();
 	private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		test = extent.createTest(result.getClass().getSimpleName()+ "  @Test case :"+" "+ result.getMethod().getMethodName());
+		ExtentTest test = extent.createTest(result.getClass().getSimpleName()+ "  @Test case :"+" "+ result.getMethod().getMethodName());
 		extentTest.set(test);
 	}
 
@@ -33,9 +31,9 @@ public class ExtentListener  implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 
 		String methodName = result.getMethod().getMethodName();
-		String logText = "<b>" + "TEST CASE :- " + methodName.toUpperCase()+"  "+ "PASSED" + "</b>";
-		
-		extentTest.get().log(Status.PASS, MarkupHelper.createLabel(logText, ExtentColor.GREEN));
+		String logText = "<b>" + "TEST CASE :- " + methodName.toUpperCase()+"  PASSED" + "</b>";
+		Markup m = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
+		extentTest.get().log(Status.PASS,m);
 	}
 
 	@Override
@@ -45,12 +43,12 @@ public class ExtentListener  implements ITestListener {
 		WebDriver driver=null;
 		String methodName=result.getMethod().getMethodName();
 		String exceptionMessage=Arrays.toString(result.getThrowable().getStackTrace());
-		String logText="<b>"+"TEST CASE :- "+methodName.toUpperCase()+"  "+"FAILED"+"</b>";
+		String logText="<b>"+"TEST CASE :- "+methodName.toUpperCase()+"  FAILED"+"</b>";
+		Markup m = MarkupHelper.createLabel(logText, ExtentColor.RED);
+		extentTest.get().log(Status.FAIL,m);
 		
-		extentTest.get().log(Status.FAIL,MarkupHelper.createLabel(logText,ExtentColor.RED));
-		
-		extentTest.get().log(Status.FAIL, "<details>"+"<summary>"+"<b>"+"<font color=red>"+"Exception Occured : Click to see"+"</font>"+"</b>"
-		+"</summary>"+exceptionMessage.replaceAll(",", "<br>")+"</details>");
+		extentTest.get().log(Status.FAIL, "<details>"+"<summary>"+"<b>"+"<font color=red>"+"Exception Occured : Click to see details"+"</font>"+"</b>"
+		+"</summary>"+exceptionMessage.replaceAll(",", "<br>")+"</details> \n");
 		
 		MediaEntityModelProvider mediaModel;
 		Object testObject = result.getInstance();
@@ -62,13 +60,14 @@ public class ExtentListener  implements ITestListener {
 		}
 		
 		try {
-			mediaModel = MediaEntityBuilder.createScreenCaptureFromPath(ScreenShots.screenShot1(driver,result.getMethod().getMethodName()), result.getMethod().getMethodName()).build();
+			mediaModel = MediaEntityBuilder.createScreenCaptureFromPath(ScreenShots.screenShot1(driver,result.getMethod().getMethodName())).build();
 			
-			extentTest.get().log(Status.FAIL,"<b>"+"<font color=red>"+"ScreenShot of failure"+"</font>"+"</b>", mediaModel);
+			extentTest.get().log(Status.FAIL,"<b><font color=red>"+"ScreenShot of failure"+"</font></b>", mediaModel);
 		
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} 
+		catch (IOException e)
+		{
+			extentTest.get().log(Status.FAIL, "Test Failed ,can not attach Sceenshot");
 		}		
 		
 	}
@@ -77,7 +76,7 @@ public class ExtentListener  implements ITestListener {
 	public void onTestSkipped(ITestResult result) {
 
 		String methodName = result.getMethod().getMethodName();
-		String logText = "<b>" + "TEST CASE :- " + methodName.toUpperCase()+"  "+"SKIPPED" + "</b>";
+		String logText = "<b>" + "TEST CASE :- " + methodName.toUpperCase()+"  SKIPPED" + "</b>";
 		Markup m = MarkupHelper.createLabel(logText, ExtentColor.ORANGE);
 		extentTest.get().log(Status.SKIP, m);
 	}
@@ -94,6 +93,9 @@ public class ExtentListener  implements ITestListener {
 
 	@Override
 	public void onFinish(ITestContext context) {
-		extent.flush();
+		if(extent!=null)
+		{
+			extent.flush();
+		}
 	}
 }
